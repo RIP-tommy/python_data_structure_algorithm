@@ -11,11 +11,11 @@ while(n != house_n):
     map_info.append(input().rstrip())
     n+=1
 
-def dfs(map_info, start_node):
+def dfs(map_info):
     visit = list()
     stack = list()
 
-    stack.append(start_node)
+    stack.append([0, 0])
 
     while stack:
         node = stack.pop()
