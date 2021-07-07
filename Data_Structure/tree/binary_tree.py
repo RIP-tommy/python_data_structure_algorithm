@@ -29,7 +29,10 @@ class Binary_Tree:
                     self.current = self.right
 
     def in_order(self):
-        print(self.root.data)
+        if self.left:
+            self.current = self.left
+        else:
+            print(self.current.data)
 
 node = (50, 15, 62, 5, 20, 58, 91, 3, 8, 37, 60, 24)
 
@@ -37,5 +40,3 @@ tree = Binary_Tree()
 
 for i in node:
     tree.insert(i)
-
-tree.in_order()
