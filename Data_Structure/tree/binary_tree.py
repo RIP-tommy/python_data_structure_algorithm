@@ -1,16 +1,18 @@
+from __future__ import annotations
+from typing import Any, Type
+
 class Node:
-    def __init__(self, data, left = None, right = None):
-        self.data = data
+    """이진 검색 트리의 노드"""
+    def __init__(self, key: Any, value: Any, left: Node = None, right: Node = None):
+        self.key = key
+        self.value = value 
         self.left = left
         self.right = right
 
-class Binary_Tree:
+class BinarySearchTree:
     def __init__(self):
         self.root = None
-        self.current = None
-        self.left = None
-        self.right = None
-    
+
     def insert(self, data):
         if not self.root:
             self.root = Node(data)
@@ -36,7 +38,7 @@ class Binary_Tree:
 
 node = (50, 15, 62, 5, 20, 58, 91, 3, 8, 37, 60, 24)
 
-tree = Binary_Tree()
+tree = BinarySearchTree()
 
 for i in node:
     tree.insert(i)
